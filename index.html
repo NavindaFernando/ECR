@@ -9,22 +9,32 @@
     <meta name="viewport" content="width=device-width initial-scale=1">
 
     <link rel="icon" href="assets/img/logo.png">
-    <link rel="stylesheet" href="assets/css%20normalize">
+    <!--<link rel="stylesheet" href="assets/css%20normalize/normalize.css">-->
 
-    <link rel="stylesheet" href="assets/fonts/css/all.css">
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Montserrat:wght@100&family=Open+Sans:wght@800&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <style>
+
+    /*------------------- Nav Bar ---------------------*/
+
+    body{
+        background-color: #F5F5F5;
+    }
 
     header{
         display: flex;
         border-bottom: 1px solid #f6f4f4;
         align-items: center;
         justify-items: center;
+        background-color: #FFFFFF;
+        /*border-radius: 30px 30px 0 0;*/
     }
 
     #logo{
@@ -62,7 +72,7 @@
         padding: 0 17px 0 17px;
         font-size: 13px;
         position: relative;
-        left: 500px;
+        left: 630px;
         color: gray;
         width: 15px;
         height: 15px;
@@ -77,20 +87,887 @@
     #avatar{
         position: relative;
         width: 28px;
-        left: 520px;
+        left: 650px;
     }
 
     #avatar:hover{
         cursor: pointer;
     }
+
+    /*------------------- Choose Driver ---------------------*/
+
+    #chooseDriver_container{
+        background-color: #FFFFFF;
+        height: 220px;
+    }
+
+    #paraOne{
+        position: absolute;
+        left: 38px;
+        top: 10%;
+        font-size: 28px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+
+    #paraTwo{
+        position: absolute;
+        left: 39px;
+        top: 19%;
+        font-size: 12px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        opacity: 55%;
+    }
+
+    #paraThree{
+        position: absolute;
+        left: 39px;
+        top: 25%;
+        font-size: 12px;
+        color: #4375F8;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        opacity: 55%;
+    }
+
+    #avatarTwo,#avatarThree,#avatarFour{
+        position: relative;
+        width: 45px;
+        top: 145px;
+        left: 20px;
+    }
+
+    #avatarThree{
+        left: -10px;
+    }
+
+    #avatarFour{
+        left: -40px;
+    }
+
+    #avatarFive{
+        position: relative;
+        width: 23px;
+        height: 23px;
+        background-color: #e0e0e0;
+        border-radius: 100%;
+        top: 107px;
+        left: 88px;
+    }
+
+    #avatarFiveText{
+        position: absolute;
+        text-align: center;
+        font-size: 9px;
+        margin: auto;
+        top: 5px;
+        left: 3px;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    #inputChooseDriver{
+        position: absolute;
+        width: 19%;
+        height: 4%;
+        left: 135px;
+        top: 213px;
+        background-color: #f6f6f6;
+        border-radius: 10px 10px 10px 10px;
+        border: none;
+        outline: none;
+        text-align: center;
+    }
+
+    #inputChooseDriver::placeholder{
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        opacity: 50%;
+    }
+
+    /*------------------- form container ---------------------*/
+
+    #form_container{
+        position: absolute;
+        border: 1px solid #eaeaea;
+        top: 83px;
+        left: 32%;
+        border-radius: 30px 30px 30px 30px;
+        width: 860px;
+        height: 170px;
+        background-color: #FFFFFF;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    #svgLocationOne{
+        position: absolute;
+        font-size: 13px;
+        top: 20px;
+        left: 62px;
+        color: #4375F8;
+        width: 15px;
+        height: 15px;
+    }
+
+    #pPickUp{
+        position: absolute;
+        left: 85px;
+        top: 6%;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        opacity: 80%;
+
+    }
+
+    #inputPickUp{
+        position: absolute;
+        width: 40%;
+        left: 55px;
+        top: 25%;
+        background-color: #f6f6f6;
+        border-radius: 10px 10px 10px 10px;
+        height: 19%;
+        border: none;
+        outline: none;
+        text-align: center;
+    }
+
+    #inputPickUp::placeholder{
+        opacity: 50%;
+        font-size: 12px;
+    }
+
+    #svgLocationTwo{
+        position: absolute;
+        font-size: 13px;
+        top: 20px;
+        left: 462px;
+        color: #4375F8;
+        width: 15px;
+        height: 15px;
+    }
+
+    #pDropOff{
+        position: absolute;
+        left: 485px;
+        top: 6%;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        opacity: 80%;
+    }
+
+    #inputDropOff{
+        position: absolute;
+        width: 40%;
+        left: 455px;
+        top: 25%;
+        background-color: #f6f6f6;
+        border-radius: 10px 10px 10px 10px;
+        height: 19%;
+        border: none;
+        outline: none;
+        text-align: center;
+    }
+
+    #inputDropOff::placeholder{
+        opacity: 50%;
+        font-size: 12px;
+    }
+
+    #svgPickUpDate{
+        position: absolute;
+        font-size: 13px;
+        top: 91px;
+        left: 62px;
+        color: #4375F8;
+        width: 15px;
+        height: 15px;
+    }
+
+    #pPickUpDate{
+        position: absolute;
+        left: 85px;
+        top: 48%;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        opacity: 80%;
+    }
+
+    #inputPickUpDate{
+        position: absolute;
+        width: 17%;
+        left: 55px;
+        top: 67%;
+        background-color: #f6f6f6;
+        border-radius: 10px 10px 10px 10px;
+        height: 19%;
+        border: none;
+        outline: none;
+        color: #acacac;
+        text-align: center;
+    }
+
+    #inputPickUpDate::placeholder{
+        opacity: 50%;
+    }
+
+    #svgDropOffDate{
+        position: absolute;
+        font-size: 13px;
+        top: 91px;
+        left: 262px;
+        color: #4375F8;
+        width: 15px;
+        height: 15px;
+    }
+
+    #pDropOffDate{
+        position: absolute;
+        left: 285px;
+        top: 48%;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        opacity: 80%;
+    }
+
+    #inputDropOffDate{
+        position: absolute;
+        width: 17%;
+        left: 255px;
+        top: 67%;
+        background-color: #f6f6f6;
+        border-radius: 10px 10px 10px 10px;
+        height: 19%;
+        border: none;
+        outline: none;
+        color: #acacac;
+        text-align: center;
+    }
+
+    #inputDropOffDate::placeholder{
+        opacity: 50%;
+    }
+
+    #svgPickUpTime{
+        position: absolute;
+        font-size: 13px;
+        top: 91px;
+        left: 462px;
+        color: #4375F8;
+        width: 15px;
+        height: 15px;
+    }
+
+    #pPickUpTime{
+        position: absolute;
+        left: 485px;
+        top: 48%;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        opacity: 80%;
+    }
+
+    #inputPickUpTime{
+        position: absolute;
+        width: 17%;
+        left: 455px;
+        top: 67%;
+        background-color: #f6f6f6;
+        border-radius: 10px 10px 10px 10px;
+        height: 19%;
+        border: none;
+        outline: none;
+        color: #acacac;
+        text-align: center;
+    }
+
+    #inputPickUpTime::placeholder{
+        opacity: 50%;
+    }
+
+    #svgDropOffTime{
+        position: absolute;
+        font-size: 13px;
+        top: 91px;
+        left: 662px;
+        color: #4375F8;
+        width: 15px;
+        height: 15px;
+    }
+
+    #pDropOffTime{
+        position: absolute;
+        left: 685px;
+        top: 48%;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        opacity: 80%;
+    }
+
+    #inputDropOffTime{
+        position: absolute;
+        width: 17%;
+        left: 655px;
+        top: 67%;
+        background-color: #f6f6f6;
+        border-radius: 10px 10px 10px 10px;
+        height: 19%;
+        border: none;
+        outline: none;
+        color: #acacac;
+        text-align: center;
+    }
+
+    #inputDropOffTime::placeholder{
+        opacity: 50%;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        width: 15px;
+        margin: auto;
+        margin-right: 10px;
+    }
+
+    input[type="time"]::-webkit-calendar-picker-indicator {
+        width: 15px;
+        margin: auto;
+        margin-right: 10px;
+    }
+
+    /*------------------- Filter ---------------------*/
+
+    #filter_container{
+        position: absolute;
+        width: 250px;
+        height: 322px;
+        border: 1px solid #eaeaea;
+        top: 45%;
+        left: 3%;
+        border-radius: 30px 30px 30px 30px;
+        background-color: #FFFFFF;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    #filterTopic{
+        position: absolute;
+        left: 89px;
+        top: 1px;
+        font-size: 20px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+
+    #filterHr{
+        position: relative;
+        width: 170px;
+        top: 50px;
+        border: 1px solid #f1f1f1;
+    }
+
+/*price range*/
+    #priceInputOne,#priceInputTwo{
+        border: none;
+    }
+
+    #pPriceRange{
+        position: absolute;
+        left: 78px;
+        top: 83%;
+        font-size: 12px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        opacity: 55%;
+    }
+
+    .range-slider {
+        position: absolute;
+        width: 365px;
+        height: 3em;
+        top: 55%;
+        left: 4%;
+        margin: auto;
+    }
+
+    .range-slider svg,
+    .range-slider input[type=range] {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    input[type=number] {
+        position: relative;
+        border: 1px solid #ddd;
+        text-align: center;
+        font-size: 0.8em;
+        -moz-appearance: textfield;
+        left: 36px;
+        top: 10px;
+        border: none;
+        outline: none;
+    }
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    input[type=number]:invalid,
+    input[type=number]:out-of-range {
+        border: 2px solid #ff6347;
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        /*width: 100%;*/
+        width: 60%;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #4375F8;
+    }
+
+    input[type=range]:focus::-ms-fill-lower {
+        background: #4375F8;
+    }
+
+    input[type=range]:focus::-ms-fill-upper {
+        background: #4375F8;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 2px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: #e2e2e2;
+        border-radius: 100px;
+        box-shadow: none;
+        border: 0;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        z-index: 2;
+        position: relative;
+        box-shadow: 0px 0px 0px #000;
+        border: 1px solid #4375F8;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: #4375F8;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
+    }
+
+    input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 5px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: #4375F8;
+        border-radius: 1px;
+        box-shadow: none;
+        border: 0;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        z-index: 2;
+        position: relative;
+        box-shadow: 0px 0px 0px #000;
+        border: 1px solid #4375F8;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: #4375F8;
+        cursor: pointer;
+    }
+
+    input[type=range]::-ms-track {
+        width: 100%;
+        height: 5px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+
+    input[type=range]::-ms-fill-lower,
+    input[type=range]::-ms-fill-upper {
+        background: #4375F8;
+        border-radius: 1px;
+        box-shadow: none;
+        border: 0;
+    }
+
+    input[type=range]::-ms-thumb {
+        z-index: 2;
+        position: relative;
+        box-shadow: 0px 0px 0px #000;
+        border: 1px solid #4375F8;
+        height: 18px;
+        width: 18px;
+        border-radius: 25px;
+        background: #4375F8;
+        cursor: pointer;
+    }
+
+    /*checkbox*/
+    input[type=checkbox] + label {
+        position: absolute;
+        display: block;
+        margin: 0.2em;
+        cursor: pointer;
+        padding: 0.2em;
+        top: 447px;
+        left: 111px;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+    }
+
+    input[type=checkbox] {
+        display: none;
+    }
+
+    input[type=checkbox] + label:before {
+        content: "\2714";
+        background-color: #e7e7e7;
+        border-radius: 0.4em;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        padding-left: 0.2em;
+        padding-bottom: 0.3em;
+        margin-right: 0.2em;
+        vertical-align: bottom;
+        color: transparent;
+        transition: .2s;
+    }
+
+    input[type=checkbox] + label:active:before {
+        transform: scale(0);
+    }
+
+    input[type=checkbox]:checked + label:before {
+        background-color: #4375F8;
+        color: #FFFFFF;
+    }
+
+    #pType{
+        position: absolute;
+        left: 68px;
+        top: 67%;
+        font-size: 12px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        opacity: 55%;
+    }
+
+    #LblCheckBox2{
+        /*border: 2px solid red;*/
+        position: relative;
+        left:188px;
+        top:167px;
+        width: max-content;
+    }
+
+    #pFuel{
+        position: absolute;
+        left: 68px;
+        top: 75%;
+        font-size: 12px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        opacity: 55%;
+    }
+
+    #LblCheckBox3{
+        /*border: 2px solid red;*/
+        position: relative;
+        left:188px;
+        top:192px;
+        width: max-content;
+    }
+
+    #LblCheckBox4{
+        /*border: 2px solid red;*/
+        position: relative;
+        left:103px;
+        top:163px;
+        width: max-content;
+    }
+
+    #pTransmission{
+        position: absolute;
+        left: 68px;
+        top: 83%;
+        font-size: 12px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        opacity: 55%;
+    }
+
+    #LblCheckBox5{
+        /*border: 2px solid red;*/
+        position: relative;
+        left:188px;
+        top:189px;
+        width: max-content;
+    }
+
+    #LblCheckBox6{
+        /*border: 2px solid red;*/
+        position: relative;
+        left:103px;
+        top:160px;
+        width: max-content;
+    }
+
+    #pText{
+        position: absolute;
+        left: 115px;
+        top: 88%;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: lighter;
+        opacity: 40%;
+        text-align: center;
+    }
+
+    /*Car Container*/
+    #carList_container{
+        position: absolute;
+        width: 970px;
+        height: 345px;
+        /*border: 1px solid red;*/
+        top: 45%;
+        left: 25%;
+        border-radius: 30px 30px 30px 30px;
+        /*background-color: red;*/
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        justify-items: center;
+    }
+
+    #carBox1, #carBox2, #carBox3, #carBox4, #carBox5, #carBox6, #carBox7, #carBox8, #carBox9, #carBox10{
+        width: 170px;
+        height: 150px;
+        background-color: #FFFFFF;
+        border-radius: 15px 15px 15px 15px;
+        cursor: pointer;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    #car1Name, #car2Name, #car3Name, #car4Name, #car5Name, #car6Name, #car7Name, #car8Name, #car9Name, #car10Name{
+        position: relative;
+        top: 15px;
+        left: 18px;
+        font-size: 14px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+
+    #car1Description, #car2Description, #car3Description, #car4Description, #car5Description, #car6Description, #car7Description, #car8Description, #car9Description, #car10Description{
+        position: relative;
+        top: 32px;
+        right: 45px;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        opacity: 50%;
+    }
+
+    #car1Price, #car2Price, #car3Price, #car4Price, #car5Price, #car6Price, #car7Price, #car8Price, #car9Price, #car10Price{
+        /*border: 1px solid red;*/
+        position: relative;
+        top: 45px;
+        left: 92px;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        width: max-content;
+    }
+
+    #car1Duration, #car2Duration, #car3Duration, #car4Duration, #car5Duration, #car6Duration, #car7Duration, #car8Duration, #car9Duration, #car10Duration{
+        position: relative;
+        top: 45px;
+        left: 92px;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        width: max-content;
+        opacity: 60%;
+    }
+
+    #car1AvailableIcon, #car2AvailableIcon, #car3AvailableIcon, #car4AvailableIcon, #car5AvailableIcon, #car6AvailableIcon, #car7AvailableIcon, #car8AvailableIcon, #car9AvailableIcon, #car10AvailableIcon{
+        position: relative;
+        width: 14px;
+        top: 47px;
+        right: 53px;
+    }
+
+    #car1AvailableCount, #car2AvailableCount, #car3AvailableCount, #car4AvailableCount, #car5AvailableCount, #car6AvailableCount, #car7AvailableCount, #car8AvailableCount, #car9AvailableCount, #car10AvailableCount{
+        position: relative;
+        top: 45px;
+        right: 53px;
+        font-size: 11px;
+        color: black;
+        font-family: 'Jost', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        width: max-content;
+        opacity: 60%;
+    }
+
+    #car1Img, #car2Img, #car3Img, #car4Img, #car5Img, #car6Img, #car7Img, #car8Img, #car9Img, #car10Img{
+        /*border: 1px solid red;*/
+        position: relative;
+        width: 160px;
+        height: 60px;
+        margin: auto;
+        top: 35px;
+        background-size: cover;
+    }
+
+    #car1Img{
+        background-image: url("assets/img/car1.jpeg");
+    }
+
+    #car2Img{
+        background-image: url("assets/img/car2.png");
+    }
+
+    #car3Img{
+        background-image: url("assets/img/car3.png");
+    }
+
+    #car4Img{
+        background-image: url("assets/img/car4.jpg");
+    }
+
+    #car5Img{
+        background-image: url("assets/img/car5.png");
+    }
+
+    #car6Img{
+        background-image: url("assets/img/car6.png");
+    }
+
+    #car7Img{
+        background-image: url("assets/img/car7.jpg");
+    }
+
+    #car8Img{
+        background-image: url("assets/img/car8.jpeg");
+    }
+
+    #car9Img{
+        background-image: url("assets/img/car9.png");
+    }
+
+    #car10Img{
+        background-image: url("assets/img/car3.png");
+    }
+
 </style>
 
 <body>
-    <!--head-->
+    <!--Head-->
     <header id="head">
-
         <p id="logo">ECRC</p>
-
         <ul id="navHeaderOne">
             <li>Booking</li>
             <li>About Us</li>
@@ -100,10 +977,247 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 32V49.88C328.5 61.39 384 124.2 384 200V233.4C384 278.8 399.5 322.9 427.8 358.4L442.7 377C448.5 384.2 449.6 394.1 445.6 402.4C441.6 410.7 433.2 416 424 416H24C14.77 416 6.365 410.7 2.369 402.4C-1.628 394.1-.504 384.2 5.26 377L20.17 358.4C48.54 322.9 64 278.8 64 233.4V200C64 124.2 119.5 61.39 192 49.88V32C192 14.33 206.3 0 224 0C241.7 0 256 14.33 256 32V32zM216 96C158.6 96 112 142.6 112 200V233.4C112 281.3 98.12 328 72.31 368H375.7C349.9 328 336 281.3 336 233.4V200C336 142.6 289.4 96 232 96H216zM288 448C288 464.1 281.3 481.3 269.3 493.3C257.3 505.3 240.1 512 224 512C207 512 190.7 505.3 178.7 493.3C166.7 481.3 160 464.1 160 448H288z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M495.9 166.6C499.2 175.2 496.4 184.9 489.6 191.2L446.3 230.6C447.4 238.9 448 247.4 448 256C448 264.6 447.4 273.1 446.3 281.4L489.6 320.8C496.4 327.1 499.2 336.8 495.9 345.4C491.5 357.3 486.2 368.8 480.2 379.7L475.5 387.8C468.9 398.8 461.5 409.2 453.4 419.1C447.4 426.2 437.7 428.7 428.9 425.9L373.2 408.1C359.8 418.4 344.1 427 329.2 433.6L316.7 490.7C314.7 499.7 307.7 506.1 298.5 508.5C284.7 510.8 270.5 512 255.1 512C241.5 512 227.3 510.8 213.5 508.5C204.3 506.1 197.3 499.7 195.3 490.7L182.8 433.6C167 427 152.2 418.4 138.8 408.1L83.14 425.9C74.3 428.7 64.55 426.2 58.63 419.1C50.52 409.2 43.12 398.8 36.52 387.8L31.84 379.7C25.77 368.8 20.49 357.3 16.06 345.4C12.82 336.8 15.55 327.1 22.41 320.8L65.67 281.4C64.57 273.1 64 264.6 64 256C64 247.4 64.57 238.9 65.67 230.6L22.41 191.2C15.55 184.9 12.82 175.3 16.06 166.6C20.49 154.7 25.78 143.2 31.84 132.3L36.51 124.2C43.12 113.2 50.52 102.8 58.63 92.95C64.55 85.8 74.3 83.32 83.14 86.14L138.8 103.9C152.2 93.56 167 84.96 182.8 78.43L195.3 21.33C197.3 12.25 204.3 5.04 213.5 3.51C227.3 1.201 241.5 0 256 0C270.5 0 284.7 1.201 298.5 3.51C307.7 5.04 314.7 12.25 316.7 21.33L329.2 78.43C344.1 84.96 359.8 93.56 373.2 103.9L428.9 86.14C437.7 83.32 447.4 85.8 453.4 92.95C461.5 102.8 468.9 113.2 475.5 124.2L480.2 132.3C486.2 143.2 491.5 154.7 495.9 166.6V166.6zM256 336C300.2 336 336 300.2 336 255.1C336 211.8 300.2 175.1 256 175.1C211.8 175.1 176 211.8 176 255.1C176 300.2 211.8 336 256 336z"/></svg>
         </ul>
-
         <img id="avatar" src="assets/img/Avatar.png" alt="">
-
     </header>
 
+    <!--Choose Driver & Form-->
+    <section id="chooseDriver_container">
+        <div>
+            <p id="paraOne">Book car in easy steps</p>
+            <p id="paraTwo">Renting a car brings you freedom, and we'll help <br> you find the best car for you at a great price.</p>
+            <img id="avatarTwo" src="assets/img/AvatarTwo.png" alt="">
+            <img id="avatarThree" src="assets/img/AvatarTwo.png" alt="">
+            <img id="avatarFour" src="assets/img/AvatarTwo.png" alt="">
+            <div id="avatarFive">
+                <p id="avatarFiveText">+2k</p>
+            </div>
+            <input id="inputChooseDriver" type="text" placeholder="Do you need one of our drivers ? yes / no">
+            <p id="paraThree">Trust by 10 million customers</p>
+        </div>
+
+     <!--Form-->
+        <div id="form_container">
+
+            <svg id="svgLocationOne" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg>
+            <p id="pPickUp">Pick-up</p>
+            <input id="inputPickUp" type="text" placeholder="  Enter your pick-up location">
+
+            <svg id="svgLocationTwo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"/></svg>
+            <p id="pDropOff">Drop-off</p>
+            <input id="inputDropOff" type="text" placeholder="  Enter your Drop-off location">
+
+            <svg id="svgPickUpDate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M160 32V64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V160H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32zM0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192zM64 304C64 312.8 71.16 320 80 320H112C120.8 320 128 312.8 128 304V272C128 263.2 120.8 256 112 256H80C71.16 256 64 263.2 64 272V304zM192 304C192 312.8 199.2 320 208 320H240C248.8 320 256 312.8 256 304V272C256 263.2 248.8 256 240 256H208C199.2 256 192 263.2 192 272V304zM336 256C327.2 256 320 263.2 320 272V304C320 312.8 327.2 320 336 320H368C376.8 320 384 312.8 384 304V272C384 263.2 376.8 256 368 256H336zM64 432C64 440.8 71.16 448 80 448H112C120.8 448 128 440.8 128 432V400C128 391.2 120.8 384 112 384H80C71.16 384 64 391.2 64 400V432zM208 384C199.2 384 192 391.2 192 400V432C192 440.8 199.2 448 208 448H240C248.8 448 256 440.8 256 432V400C256 391.2 248.8 384 240 384H208zM320 432C320 440.8 327.2 448 336 448H368C376.8 448 384 440.8 384 432V400C384 391.2 376.8 384 368 384H336C327.2 384 320 391.2 320 400V432z"/></svg>
+            <p id="pPickUpDate">Pick-up-Date</p>
+            <input id="inputPickUpDate" type="date" placeholder="  18 August">
+
+            <svg id="svgDropOffDate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M160 32V64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V160H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32zM0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192zM64 304C64 312.8 71.16 320 80 320H112C120.8 320 128 312.8 128 304V272C128 263.2 120.8 256 112 256H80C71.16 256 64 263.2 64 272V304zM192 304C192 312.8 199.2 320 208 320H240C248.8 320 256 312.8 256 304V272C256 263.2 248.8 256 240 256H208C199.2 256 192 263.2 192 272V304zM336 256C327.2 256 320 263.2 320 272V304C320 312.8 327.2 320 336 320H368C376.8 320 384 312.8 384 304V272C384 263.2 376.8 256 368 256H336zM64 432C64 440.8 71.16 448 80 448H112C120.8 448 128 440.8 128 432V400C128 391.2 120.8 384 112 384H80C71.16 384 64 391.2 64 400V432zM208 384C199.2 384 192 391.2 192 400V432C192 440.8 199.2 448 208 448H240C248.8 448 256 440.8 256 432V400C256 391.2 248.8 384 240 384H208zM320 432C320 440.8 327.2 448 336 448H368C376.8 448 384 440.8 384 432V400C384 391.2 376.8 384 368 384H336C327.2 384 320 391.2 320 400V432z"/></svg>
+            <p id="pDropOffDate">Drop-off-Date</p>
+            <input id="inputDropOffDate" type="date" placeholder="  24 september">
+
+            <svg id="svgPickUpTime" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512zM232 256C232 264 236 271.5 242.7 275.1L338.7 339.1C349.7 347.3 364.6 344.3 371.1 333.3C379.3 322.3 376.3 307.4 365.3 300L280 243.2V120C280 106.7 269.3 96 255.1 96C242.7 96 231.1 106.7 231.1 120L232 256z"/></svg>
+            <p id="pPickUpTime">Pick-up-Time</p>
+            <input id="inputPickUpTime" type="time" placeholder="  10:00">
+
+            <svg id="svgDropOffTime" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512zM232 256C232 264 236 271.5 242.7 275.1L338.7 339.1C349.7 347.3 364.6 344.3 371.1 333.3C379.3 322.3 376.3 307.4 365.3 300L280 243.2V120C280 106.7 269.3 96 255.1 96C242.7 96 231.1 106.7 231.1 120L232 256z"/></svg>
+            <p id="pDropOffTime">Drop-off-Time</p>
+            <input id="inputDropOffTime" type="time" placeholder="  12:00">
+        </div>
+    </section>
+
+    <!--Filter-->
+    <section>
+        <!--Topic-->
+        <div id="filter_container">
+                <p id="filterTopic">Filter By</p>
+                <hr id="filterHr">
+        </div>
+
+        <!--Price range-->
+        <div class="range-slider">
+            <p id="pPriceRange">Price Range</p>
+	        <span>
+		        <input id="priceInputOne" type="number" value="50000" min="0" max="120000"/>
+		        <input id="priceInputTwo" type="number" value="450000" min="0" max="120000"/>
+	        </span>
+                <input value="50000" min="0" max="500000" step="500" type="range"/>
+                <input value="450000" min="0" max="500000" step="500" type="range"/>
+        </div>
+
+        <!--Checkbox-->
+        <p id="pType">Type</p>
+        <p id="pFuel">Fuel</p>
+        <p id="pTransmission">Type</p>
+        <p id="pText">Filter the car you want.</p>
+
+        <div style="z-index: 4">
+            <form>
+                <input type="checkbox" id="checkBox1" name="fruit-1" value="Mini">
+                <label for="checkBox1"> &nbsp; Mini</label>
+
+                <input type="checkbox" id="checkBox2" name="fruit-1" value="Mini">
+                <label id="LblCheckBox2" for="checkBox2"> &nbsp; luxury</label>
+
+                <input type="checkbox" id="checkBox3" name="fruit-1" value="Mini">
+                <label id="LblCheckBox3" for="checkBox3"> &nbsp; Diesel</label>
+
+                <input type="checkbox" id="checkBox4" name="fruit-1" value="Mini">
+                <label id="LblCheckBox4" for="checkBox4"> &nbsp; Petrol</label>
+
+                <input type="checkbox" id="checkBox5" name="fruit-1" value="Mini">
+                <label id="LblCheckBox5" for="checkBox5"> &nbsp; Manual</label>
+
+                <input type="checkbox" id="checkBox6" name="fruit-1" value="Mini">
+                <label id="LblCheckBox6" for="checkBox6"> &nbsp; Auto</label>
+            </form>
+        </div>
+    </section>
+
+    <!--Car List-->
+    <section id="carList_container">
+        <div id="carBox1">
+            <label id="car1Name">Car name</label>
+            <label id="car1Description">Description</label>
+            <div id="car1Img"></div>
+            <label id="car1Price">LKR00000</label>
+            <label id="car1Duration">/d</label>
+            <img id="car1AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car1AvailableCount">0</label>
+        </div>
+
+        <div id="carBox2">
+            <label id="car2Name">Car name</label>
+            <label id="car2Description">Description</label>
+            <div id="car2Img"></div>
+            <label id="car2Price">LKR00000</label>
+            <label id="car2Duration">/d</label>
+            <img id="car2AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car2AvailableCount">0</label>
+        </div>
+
+        <div id="carBox3">
+            <label id="car3Name">Car name</label>
+            <label id="car3Description">Description</label>
+            <div id="car3Img"></div>
+            <label id="car3Price">LKR00000</label>
+            <label id="car3Duration">/d</label>
+            <img id="car3AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car3AvailableCount">0</label>
+        </div>
+
+        <div id="carBox4">
+            <label id="car4Name">Car name</label>
+            <label id="car4Description">Description</label>
+            <div id="car4Img"></div>
+            <label id="car4Price">LKR00000</label>
+            <label id="car4Duration">/d</label>
+            <img id="car4AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car4AvailableCount">0</label>
+        </div>
+
+        <div id="carBox5">
+            <label id="car5Name">Car name</label>
+            <label id="car5Description">Description</label>
+            <div id="car5Img"></div>
+            <label id="car5Price">LKR00000</label>
+            <label id="car5Duration">/d</label>
+            <img id="car5AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car5AvailableCount">0</label>
+        </div>
+
+        <div id="carBox6">
+            <label id="car6Name">Car name</label>
+            <label id="car6Description">Description</label>
+            <div id="car6Img"></div>
+            <label id="car6Price">LKR00000</label>
+            <label id="car6Duration">/d</label>
+            <img id="car6AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car6AvailableCount">0</label>
+        </div>
+
+        <div id="carBox7">
+            <label id="car7Name">Car name</label>
+            <label id="car7Description">Description</label>
+            <div id="car7Img"></div>
+            <label id="car7Price">LKR00000</label>
+            <label id="car7Duration">/d</label>
+            <img id="car7AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car7AvailableCount">0</label>
+        </div>
+
+        <div id="carBox8">
+            <label id="car8Name">Car name</label>
+            <label id="car8Description">Description</label>
+            <div id="car8Img"></div>
+            <label id="car8Price">LKR00000</label>
+            <label id="car8Duration">/d</label>
+            <img id="car8AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car8AvailableCount">0</label>
+        </div>
+
+        <div id="carBox9">
+            <label id="car9Name">Car name</label>
+            <label id="car9Description">Description</label>
+            <div id="car9Img"></div>
+            <label id="car9Price">LKR00000</label>
+            <label id="car9Duration">/d</label>
+            <img id="car9AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car9AvailableCount">0</label>
+        </div>
+
+        <div id="carBox10">
+            <label id="car10Name">Car name</label>
+            <label id="car10Description">Description</label>
+            <div id="car10Img"></div>
+            <label id="car10Price">LKR00000</label>
+            <label id="car10Duration">/d</label>
+            <img id="car10AvailableIcon" src="assets/img/blueAvatar.png" alt="">
+            <label id="car10AvailableCount">0</label>
+        </div>
+    </section>
+
+    <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+    <script>
+        (function() {
+
+            var parent = document.querySelector(".range-slider");
+            if(!parent) return;
+
+            var
+                rangeS = parent.querySelectorAll("input[type=range]"),
+                numberS = parent.querySelectorAll("input[type=number]");
+
+            rangeS.forEach(function(el) {
+                el.oninput = function() {
+                    var slide1 = parseFloat(rangeS[0].value),
+                        slide2 = parseFloat(rangeS[1].value);
+
+                    if (slide1 > slide2) {
+                        [slide1, slide2] = [slide2, slide1];
+                        // var tmp = slide2;
+                        // slide2 = slide1;
+                        // slide1 = tmp;
+                    }
+
+                    numberS[0].value = slide1;
+                    numberS[1].value = slide2;
+                }
+            });
+
+            numberS.forEach(function(el) {
+                el.oninput = function() {
+                    var number1 = parseFloat(numberS[0].value),
+                        number2 = parseFloat(numberS[1].value);
+
+                    if (number1 > number2) {
+                        var tmp = number1;
+                        numberS[0].value = number2;
+                        numberS[1].value = tmp;
+                    }
+                    rangeS[0].value = number1;
+                    rangeS[1].value = number2;
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
