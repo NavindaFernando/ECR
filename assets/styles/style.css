@@ -949,43 +949,43 @@ input[type=checkbox]:checked + label:before {
 }
 
 #car1Img{
-    background-image: url("../assets/img/car1.jpeg");
+    background-image: url("../img/car1.jpeg");
 }
 
 #car2Img{
-    background-image: url("../assets/img/car2.png");
+    background-image: url("../img/car2.png");
 }
 
 #car3Img{
-    background-image: url("../assets/img/car3.png");
+    background-image: url("../img/car3.png");
 }
 
 #car4Img{
-    background-image: url("../assets/img/car4.jpg");
+    background-image: url("../img/car4.jpg");
 }
 
 #car5Img{
-    background-image: url("../assets/img/car5.png");
+    background-image: url("../img/car5.png");
 }
 
 #car6Img{
-    background-image: url("../assets/img/car6.png");
+    background-image: url("../img/car6.png");
 }
 
 #car7Img{
-    background-image: url("../assets/img/car7.jpg");
+    background-image: url("../img/car7.jpg");
 }
 
 #car8Img{
-    background-image: url("../assets/img/car8.jpeg");
+    background-image: url("../img/car8.jpeg");
 }
 
 #car9Img{
-    background-image: url("../assets/img/car9.png");
+    background-image: url("../img/car9.png");
 }
 
 #car10Img{
-    background-image: url("../assets/img/car3.png");
+    background-image: url("../img/car3.png");
 }
 
 #car1Heart{
@@ -1124,19 +1124,19 @@ input[type=checkbox]:checked + label:before {
 }
 
 #carImg1{
-    background-image: url("../assets/img/imgFour.png");
+    background-image: url("../img/imgFour.png");
 }
 
 #carImg2{
-    background-image: url("../assets/img/imgTwo.png");
+    background-image: url("../img/imgTwo.png");
 }
 
 #carImg3{
-    background-image: url("../assets/img/imgThree.png");
+    background-image: url("../img/imgThree.png");
 }
 
 #carImg4{
-    background-image: url("../assets/img/imgOne.png");
+    background-image: url("../img/imgOne.png");
 }
 
 #carImgBtn_container{
